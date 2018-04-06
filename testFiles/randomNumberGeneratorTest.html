@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="document.getElementById('randomDemo').innerHTML = generateRandom(min, max)">Initiate</button>
+
+        <p id="randomDemo"></p>
+
+        <script>
+            // GENERATE BETWEEN 1 AND 800 (BOTH INLCUDED)
+            var min = 1;
+            var max = 800;
+            function generateRandom(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+        </script>
+    </body>
+</html>

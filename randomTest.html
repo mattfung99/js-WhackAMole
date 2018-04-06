@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>
+            // random Test 01 // 
+        </title>
+
+        <!-- ************** SOURCE LINKS *************** -->
+        <link rel="stylesheet" href="randomTest.css">
+        <link rel="icon" type="image/x-icon" href="controllerIcon.png">
+    </head>
+
+    <body onload="generateDiv();">
+        <div class="div-container" id="drawOnDiv">
+            <div id="div-subcontainer">
+                <div id="container"></div>
+            </div>
+        </div>
+        <div class="div-container">
+            <canvas class="button-graphics btn" id="button-container" height="50" onclick="clearAll()" width="250"></canvas>
+            <canvas class="button-graphics btn" id="button-reset" height="50" onclick="reset()" width="250"></canvas>
+        </div>
+
+        <!-- ************** SOURCE LINKS *************** -->
+        <script src="randomTest.js"></script>
+    </body>
+</html>

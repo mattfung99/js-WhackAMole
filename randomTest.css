@@ -1,0 +1,55 @@
+/* // ***** ------------------------ **** ------------------------ ***** // */  
+/**
+  * STYLES
+  *
+  * Index
+  *
+  * - button-container
+  * - button-graphics
+  * - div-container
+  * - div-subcontainer
+  * - 
+  *
+  */
+/* // ***** ------------------------ **** ------------------------ ***** // */     
+
+.btn {
+    background: #bbcce8;
+    border: 2.5px solid rgb(14, 71,163);
+    display:inline;
+}  
+
+.button-graphics {
+    cursor: pointer;    
+}
+
+.button-graphics:active {
+    transform: translateY(1px);
+}
+
+.button-graphics:focus {
+    outline: black 1px dotted;
+    outline-offset: -2px;
+}
+
+.div-container {
+    text-align: center;
+    width: 100%;
+}
+
+#div-subcontainer {
+    background: #bbcce8;
+    border: 2.5px solid rgb(14, 71, 163);
+    display: inline-block;
+    height: 800px;
+    position: relative;
+    width: 800px;
+}
+
+#container {
+    position: fixed;
+    height: 800px;
+    width: 800px;
+}
+
+/* // ***** ------------------------ **** ------------------------ ***** // */  
