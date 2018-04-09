@@ -4,11 +4,18 @@
   *
   * Index
   *
+  * - container
   * - div-container
   * - div-subcontainer
   *
   */
 /* // ***** ------------------------ **** ------------------------ ***** // */
+
+#container {
+    position: fixed;
+    height: 800px;
+    width: 800px;
+}
 
 .div-container {
     text-align: center;
@@ -16,6 +23,7 @@
 }
 
 #div-subcontainer {
+    background: #bbcce8;
     display: inline-block;
     position: relative;
 }

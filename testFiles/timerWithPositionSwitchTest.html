@@ -8,9 +8,48 @@
             <title>
                 // Position Switch Test // 
             </title>
-            <link rel="stylesheet" href="randomTimerTest.css"
+
+            <link rel="stylesheet" href="randomTimerTest.css">
         </head>
-        <body>
+        <body onload="generateSquare();">
+            <div class="div-container">
+                <div id="div-subcontainer">
+                    <div id="container"></div>
+                </div>
+            </div>
+
+            <style>
+                #div-subcontainer {
+                    height: 800px;
+                    width: 800px;
+                }
+            </style>
+
+            <script>
+                var max = 750;
+                var min = 1;
+                var randomCoordinateX;
+                var randomCoordinateY;
+
+                function generateSquare() {
+                    var squareDiv;
+                    generateRandomX(min, max);
+                    generateRandomY(min, max);
+
+                    squareDiv = document.createElement("div");
+                    squareDiv.style = "background: rgb(14, 71, 163); border: 1px solid white; cursor: pointer; height: 50px; position: absolute; width: 50px";
+                    squareDiv.style.left = randomCoordinateX + "px";
+                    squareDiv.style.top = randomCoordinateY + "px";
+                    document.getElementById("container").appendChild(squareDiv);
+                }
+
+                function generateRandomX(min, max) {
+                    randomCoordinateX = Math.floor(Math.random() * (max - min + 1)) + min;
+                }
             
+                function generateRandomY(min, max) {
+                    randomCoordinateY = Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+            </script>
         </body>
     </html>

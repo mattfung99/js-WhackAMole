@@ -84,6 +84,7 @@ function deleteDivProcess(id) {
         var reassignId = document.getElementById("squareDiv" + j);
         reassignId.id = "squareDiv" + (j-1);
     }
+    console.log(squareDivArray.length);
 }
 
 // ***** ------------------------ **** ------------------------ ***** //
