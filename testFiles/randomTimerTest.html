@@ -10,9 +10,32 @@
             </title>
         </head>
             
-        <body>
-            <p id="line01"> 
-                Line01 Visual
-            </p>
+        <body onload="setTimeout(hidden, 3000);">
+            <div class="div-container">
+                <div class="div-subcontainer">
+                    <p id="line01"> 
+                        Line01 Visual (Appear/disappear every 3 seconds)
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                var line01;
+                line01 = document.getElementById("line01");
+
+                function hidden() {
+                    //var line01;
+                    //line01 = document.getElementById("line01");
+                    line01.style = "visibility: hidden";
+                    setTimeout(visible, 3000);
+                }
+
+                function visible() {
+                    //var line01;
+                    //line01 = document.getElementById("line01");
+                    line01.style = "visibility: visible";
+                    setTimeout(hidden, 3000);
+                }
+            </script>
         </body>
     </html>
