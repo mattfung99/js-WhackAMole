@@ -72,12 +72,9 @@
 
                             squareDiv = document.createElement("div");
                             squareDiv.id = "squareDiv" + squareDivArray.length;
-                            squareDiv.style = "background: rgb(14, 71, 163); border: 1px solid white; cursor: pointer; height: 50px; position: absolute; width: 50px";
+                            squareDiv.style = "background: rgb(14, 71, 163); border: 1px solid white; height: 50px; position: absolute; width: 50px";
                             squareDiv.style.left = randomCoordinateX + "px";
                             squareDiv.style.top = randomCoordinateY + "px";
-                            squareDiv.addEventListener("click", function () {
-                                deleteDivProcess(squareDiv.id);
-                            });
 
                             document.getElementById("container").appendChild(squareDiv);
                             squareDivArray.push(squareDiv);
