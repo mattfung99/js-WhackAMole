@@ -1,0 +1,23 @@
+/* // ***** ------------------------ **** ------------------------ ***** // */  
+/**
+  * STYLES
+  *
+  * Index
+  *
+  * - div-container
+  * - div-subcontainer
+  *
+  */
+/* // ***** ------------------------ **** ------------------------ ***** // */
+
+.div-container {
+    text-align: center;
+    width: 100%;
+}
+
+#div-subcontainer {
+    display: inline-block;
+    height: 300px;
+    position: relative;
+    width: 300px;
+}
