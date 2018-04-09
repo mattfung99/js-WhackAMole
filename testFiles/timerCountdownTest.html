@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            
+            <title>
+                // Countdown Timer Test // 
+            </title>
+
+            <link rel="stylesheet" href="randomTimerTest.css">
+        </head>
+        <body>
+            <div class="div-container">
+                <div class="div-subcontainer">
+                    <button id="button" onclick="beginAgain()">Click to Begin</button>
+                    <p id="line01"></p>
+                </div>
+            </div>
+
+            <script>
+                var count = 6;
+                var startTimer;
+
+                function beginAgain() {
+                    document.getElementById("button").disabled = true;
+                    document.getElementById("button").innerHTML = "Disabled";
+                    
+                    startTimer = setInterval(function() {
+                        document.getElementById("line01").innerHTML = --count;
+                        if(count == 0) {
+                            clearInterval(startTimer);
+                            alert("Timer has ended")
+                            count = 6;
+                            document.getElementById("button").innerHTML = "Press to start again";
+                            document.getElementById("button").disabled = false;
+                        }
+                    },1000); 
+                }
+            </script>
+        </body>
+    </html>
