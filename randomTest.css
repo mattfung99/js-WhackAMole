@@ -4,8 +4,10 @@
   *
   * Index
   *
+  * - btn
   * - button-container
   * - button-graphics
+  * - container
   * - div-container
   * - div-subcontainer
   * - 
@@ -32,6 +34,12 @@
     outline-offset: -2px;
 }
 
+#container {
+    position: fixed;
+    height: 800px;
+    width: 800px;
+}
+
 .div-container {
     text-align: center;
     width: 100%;
@@ -43,12 +51,6 @@
     display: inline-block;
     height: 800px;
     position: relative;
-    width: 800px;
-}
-
-#container {
-    position: fixed;
-    height: 800px;
     width: 800px;
 }
 
