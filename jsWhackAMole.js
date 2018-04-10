@@ -2,48 +2,69 @@
                     // ***** GLOBAL VARIABLES ***** //
 // ***** ------------------------ **** ------------------------ ***** //
 
+var count = 20;
 var max = 750;
 var min = 1;
-var numberOfSquares = 11; 
+var numberOfSquares = 11;
+var positionChange = 6;
 var randomCoordinateX;
 var randomCoordinateY;
 var squareDivArray = [];
+var startTimer;
 
 // ***** ------------------------ **** ------------------------ ***** //
                     // *********** CODE *********** //
 // ***** ------------------------ **** ------------------------ ***** //
 
+function beginProgram() {
+    generateDiv();
+    document.getElementById("button").disabled = true;
+    document.getElementById("button").innerHTML = "Disabled";
 
-// ***** ------------------------ **** ------------------------ ***** //
-                    // ****** Generate Divs ******* //
-// ***** ------------------------ **** ------------------------ ***** //
+    startTimer = setInterval(function () {
+        document.getElementById("line01").innerHTML = --count;
+        positionChange = positionChange - 1;
+        console.log(positionChange);
 
-function generateDiv() {
-    for (var i = 0; i <= numberOfSquares; i++) {
-        generateSquare();
+        if (positionChange == 1) {
+            positionChange = 6;
+            clearAll();
+            generateDiv();
+        }
+
+        if (count == 0) {
+            clearInterval(startTimer);
+            //alert("Timer has ended")
+            count = 20;
+            clearAll();
+            document.getElementById("button").innerHTML = "Press to start again";
+            document.getElementById("button").disabled = false;
+        }
+    }, 1000);
+
+    function generateDiv() {
+        for (var i = 0; i <= numberOfSquares; i++) {
+            generateSquare();
+        }
     }
-}
 
-// ***** ------------------------ **** ------------------------ ***** //
-                    // ***** Generate Squares ***** //
-// ***** ------------------------ **** ------------------------ ***** //
+    function generateSquare() {
+        var squareDiv;
+        generateRandomX(min, max);
+        generateRandomY(min, max);
 
-function generateSquare() {
-    var squareDiv;
-    generateRandomX(min, max);
-    generateRandomY(min, max);
+        squareDiv = document.createElement("div");
+        squareDiv.id = "squareDiv" + squareDivArray.length;
+        squareDiv.style = "background: rgb(14, 71, 163); border: 1px solid white; cursor: pointer; height: 50px; position: absolute; width: 50px";
+        squareDiv.style.left = randomCoordinateX + "px";
+        squareDiv.style.top = randomCoordinateY + "px";
+        squareDiv.addEventListener("click", function () {
+            deleteDivProcess(squareDiv.id);
+        });
 
-    squareDiv = document.createElement("div");
-    squareDiv.id = "squareDiv" + squareDivArray.length;
-    squareDiv.style = "background: rgb(14, 71, 163); border: 1px solid white; cursor: pointer; height: 50px; position: absolute; width: 50px";
-    squareDiv.style.left = randomCoordinateX + "px";
-    squareDiv.style.top = randomCoordinateY + "px";
-    squareDiv.addEventListener("click", function () {
-        deleteDivProcess(squareDiv.id);
-    });
-
-    document.getElementById("container").appendChild(squareDiv);
-    squareDivArray.push(squareDiv);
+        document.getElementById("container").appendChild(squareDiv);
+        squareDivArray.push(squareDiv);
+    }
 }
 
 // ***** ------------------------ **** ------------------------ ***** //
@@ -84,6 +105,7 @@ function deleteDivProcess(id) {
         var reassignId = document.getElementById("squareDiv" + j);
         reassignId.id = "squareDiv" + (j-1);
     }
+    numberOfSquares = squareDivArray.length;
     console.log(squareDivArray.length);
 }
 
@@ -100,17 +122,17 @@ function reset() {
                     // ***** DRAW CANVAS TEXT ***** //
 // ***** ------------------------ **** ------------------------ ***** //
 
-var easterEgg = document.getElementById("button-container");
-var resetButton = document.getElementById("button-reset");
-var ctxEasterEgg = easterEgg.getContext("2d");
-var ctxResetButton = resetButton.getContext("2d");
+// var easterEgg = document.getElementById("button-container");
+// var resetButton = document.getElementById("button-reset");
+// var ctxEasterEgg = easterEgg.getContext("2d");
+// var ctxResetButton = resetButton.getContext("2d");
 
-ctxEasterEgg.font = "20px Comic Sans MS";
-ctxEasterEgg.fillStyle = "rgb(14, 71, 163)";
-ctxEasterEgg.textAlign = "center";
-ctxEasterEgg.fillText("???", easterEgg.width / 2, easterEgg.height / 2);
+// ctxEasterEgg.font = "20px Comic Sans MS";
+// ctxEasterEgg.fillStyle = "rgb(14, 71, 163)";
+// ctxEasterEgg.textAlign = "center";
+// ctxEasterEgg.fillText("???", easterEgg.width / 2, easterEgg.height / 2);
 
-ctxResetButton.font = "20px Comic Sans MS";
-ctxResetButton.fillStyle = "rgb(14, 71, 163)";
-ctxResetButton.textAlign = "center";
-ctxResetButton.fillText("RESET", resetButton.width / 2, resetButton.height / 2);
+// ctxResetButton.font = "20px Comic Sans MS";
+// ctxResetButton.fillStyle = "rgb(14, 71, 163)";
+// ctxResetButton.textAlign = "center";
+// ctxResetButton.fillText("RESET", resetButton.width / 2, resetButton.height / 2);

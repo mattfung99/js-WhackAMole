@@ -40,7 +40,7 @@
 
                 function beginAgain() {
                     var squareDiv;
-                    generateSquares();
+                    generateDiv();
                     document.getElementById("button").disabled = true;
                     document.getElementById("button").innerHTML = "Disabled";
 
@@ -52,7 +52,7 @@
                         if(positionChange == 1) {
                             positionChange = 6;
                             clearAll();
-                            generateSquares();
+                            generateDiv();
                         }
 
                         if (count == 0) {
@@ -65,20 +65,25 @@
                         }
                     }, 1000);
 
-                    function generateSquares() {
+                    function generateDiv() {
                         for (var i = 0; i <= numberOfSquares; i++) {
-                            generateRandomX(min, max);
-                            generateRandomY(min, max);
-
-                            squareDiv = document.createElement("div");
-                            squareDiv.id = "squareDiv" + squareDivArray.length;
-                            squareDiv.style = "background: rgb(14, 71, 163); border: 1px solid white; height: 50px; position: absolute; width: 50px";
-                            squareDiv.style.left = randomCoordinateX + "px";
-                            squareDiv.style.top = randomCoordinateY + "px";
-
-                            document.getElementById("container").appendChild(squareDiv);
-                            squareDivArray.push(squareDiv);
+                            generateSquare();
                         }
+                    }
+
+                    function generateSquare() {
+                        var squareDiv;
+                        generateRandomX(min, max);
+                        generateRandomY(min, max);
+
+                        squareDiv = document.createElement("div");
+                        squareDiv.id = "squareDiv" + squareDivArray.length;
+                        squareDiv.style = "background: rgb(14, 71, 163); border: 1px solid white; height: 50px; position: absolute; width: 50px";
+                        squareDiv.style.left = randomCoordinateX + "px";
+                        squareDiv.style.top = randomCoordinateY + "px";
+
+                        document.getElementById("container").appendChild(squareDiv);
+                        squareDivArray.push(squareDiv);  
                     }
                 }
 

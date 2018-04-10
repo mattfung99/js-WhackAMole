@@ -6,26 +6,28 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>
-            // random Test 01 // 
+            // Whack A Mole //
         </title>
 
         <!-- ************** SOURCE LINKS *************** -->
-        <link rel="stylesheet" href="randomTest.css">
+        <link rel="stylesheet" href="jsWhackAMole.css">
         <link rel="icon" type="image/x-icon" href="controllerIcon.png">
     </head>
 
-    <body onload="generateDiv();">
+    <body>
         <div class="div-container" id="drawOnDiv">
             <div id="div-subcontainer">
                 <div id="container"></div>
             </div>
         </div>
         <div class="div-container">
-            <canvas class="button-graphics btn" id="button-container" height="50" onclick="clearAll()" width="250"></canvas>
-            <canvas class="button-graphics btn" id="button-reset" height="50" onclick="reset()" width="250"></canvas>
+            <button id="button" onclick="beginProgram()">Click to Begin</button>
+            <p id="line01">20</p>
+            <!-- <canvas class="button-graphics btn" id="button-container" height="50" onclick="clearAll()" width="250"></canvas>
+            <canvas class="button-graphics btn" id="button-reset" height="50" onclick="reset()" width="250"></canvas> -->
         </div>
 
         <!-- ************** SOURCE LINKS *************** -->
-        <script src="randomTest.js"></script>
+        <script src="jsWhackAMole.js"></script>
     </body>
 </html>
