@@ -18,11 +18,11 @@ var startTimer;
 
 function beginProgram() {
     generateDiv();
-    document.getElementById("button").disabled = true;
-    document.getElementById("button").innerHTML = "Disabled";
+    document.getElementById("button-begin").disabled = true;
+    document.getElementById("button-begin").innerHTML = "Disabled";
 
     startTimer = setInterval(function () {
-        document.getElementById("line01").innerHTML = --count;
+        document.getElementById("display-timer").innerHTML = --count;
         positionChange = positionChange - 1;
         console.log(positionChange);
 
@@ -32,15 +32,25 @@ function beginProgram() {
             generateDiv();
         }
 
+        if (squareDivArray.length == 0) {
+            reset();
+        }
+
         if (count == 0) {
-            clearInterval(startTimer);
-            //alert("Timer has ended")
-            count = 20;
-            clearAll();
-            document.getElementById("button").innerHTML = "Press to start again";
-            document.getElementById("button").disabled = false;
+            reset();
         }
     }, 1000);
+
+    function reset() {
+        document.getElementById("display-timer").innerHTML = "20";
+        clearInterval(startTimer);
+        count = 20;
+        clearAll();
+        numberOfSquares = 11;
+        alert("Game Over")
+        document.getElementById("button-begin").innerHTML = "Press to start again";
+        document.getElementById("button-begin").disabled = false;
+    }
 
     function generateDiv() {
         for (var i = 0; i <= numberOfSquares; i++) {
@@ -104,6 +114,7 @@ function deleteDivProcess(id) {
     for (var j = parseInt(id.charAt(9))+1; j < squareDivArray.length+1; j++) {
         var reassignId = document.getElementById("squareDiv" + j);
         reassignId.id = "squareDiv" + (j-1);
+        console.log(reassignId.id);
     }
     numberOfSquares = squareDivArray.length;
     console.log(squareDivArray.length);
@@ -122,17 +133,10 @@ function reset() {
                     // ***** DRAW CANVAS TEXT ***** //
 // ***** ------------------------ **** ------------------------ ***** //
 
-// var easterEgg = document.getElementById("button-container");
-// var resetButton = document.getElementById("button-reset");
-// var ctxEasterEgg = easterEgg.getContext("2d");
-// var ctxResetButton = resetButton.getContext("2d");
+var mainMenu = document.getElementById("main-menu");
+var ctxMainMenu = mainMenu.getContext("2d");
 
-// ctxEasterEgg.font = "20px Comic Sans MS";
-// ctxEasterEgg.fillStyle = "rgb(14, 71, 163)";
-// ctxEasterEgg.textAlign = "center";
-// ctxEasterEgg.fillText("???", easterEgg.width / 2, easterEgg.height / 2);
-
-// ctxResetButton.font = "20px Comic Sans MS";
-// ctxResetButton.fillStyle = "rgb(14, 71, 163)";
-// ctxResetButton.textAlign = "center";
-// ctxResetButton.fillText("RESET", resetButton.width / 2, resetButton.height / 2);
+ctxMainMenu.font = "20px Arial";
+ctxMainMenu.fillStyle = "rgb(14, 71, 163)";
+ctxMainMenu.textAlign = "center";
+ctxMainMenu.fillText("Main Menu", mainMenu.width / 2, mainMenu.height / 2);
