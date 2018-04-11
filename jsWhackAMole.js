@@ -3,6 +3,7 @@
 // ***** ------------------------ **** ------------------------ ***** //
 
 var count = 20;
+var formPopup = document.getElementById("form-popup");
 var max = 750;
 var min = 1;
 var numberOfSquares = 11;
@@ -16,6 +17,8 @@ var startTimer;
 // ***** ------------------------ **** ------------------------ ***** //
                     // *********** CODE *********** //
 // ***** ------------------------ **** ------------------------ ***** //
+
+formPopup.style.display = 'none';
 
 function beginProgram() {
     document.getElementById("display-timer").innerHTML = "20";
@@ -35,10 +38,12 @@ function beginProgram() {
         }
 
         if (squareDivArray.length == 0) {
+            document.getElementById("message").innerHTML = "You Won!"
             reset();
         }
 
         if (count == 0) {
+            document.getElementById("message").innerHTML = "Nice Try!"
             reset();
         }
     }, 1000);
@@ -49,7 +54,14 @@ function beginProgram() {
         count = 20;
         clearAll();
         numberOfSquares = 11;
-        alert("Game Over")
+        formPopup.style.display = 'block';
+
+        window.onclick = function(event) {
+            if (event.target == formPopup) {
+                formPopup.style.display = 'none';
+            }
+        }
+
         document.getElementById("button-begin").innerHTML = "Press to start again";
         document.getElementById("button-begin").disabled = false;
     }
