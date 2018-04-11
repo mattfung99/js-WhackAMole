@@ -2,6 +2,7 @@
                     // ***** GLOBAL VARIABLES ***** //
 // ***** ------------------------ **** ------------------------ ***** //
 
+var backgroundMusic;
 var count = 20;
 var formPopup = document.getElementById("form-popup");
 var max = 750;
@@ -19,6 +20,19 @@ var startTimer;
 // ***** ------------------------ **** ------------------------ ***** //
 
 formPopup.style.display = 'none';
+
+backgroundMusic = new Audio('backgroundMusic01.wav');
+if (typeof backgroundMusic.loop == 'boolean') {
+    backgroundMusic.loop = true;
+}
+
+else {
+    backgroundMusic.addEventListener('ended', function () {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
+backgroundMusic.play();
 
 function beginProgram() {
     document.getElementById("display-timer").innerHTML = "20";

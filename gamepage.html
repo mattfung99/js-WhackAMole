@@ -1,61 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <title>
-            // Whack A Mole //
-        </title>
+            <title>
+                // Whack A Mole //
+            </title>
 
-        <!-- ************** SOURCE LINKS *************** -->
-        <link rel="stylesheet" href="gamepage.css">
-        <link rel="icon" type="image/x-icon" href="controllerIcon.png">
-    </head>
+            <link rel="stylesheet" href="gamepage.css">
+            <link rel="icon" type="image/x-icon" href="controllerIcon.png">
+        </head>
 
-    <body>
-        <div class="div-container" id="drawOnDiv">
-            <div id="div-subcontainer">
-                <div id="container"></div>
+        <body>
+            <div class="div-container" id="drawOnDiv">
+                <div id="div-subcontainer">
+                    <div id="container"></div>
+                </div>
             </div>
-        </div>
 
-        <div class="div-container">
-            <div style="display: inline-block; position: relative">
-                <div class='form-popup' id='form-popup'>
-                    <div class='form-box'>
-                        <p id="message"></p>
+            <div class="div-container">
+                <div style="display: inline-block; position: relative">
+                    <div class='form-popup' id='form-popup'>
+                        <div class='form-box'>
+                            <p id="message"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="div-container">
-            <div class="button-graphics btn" id="text-subcontainer">
-                <div id="text-container">
-                    <p id="main-menu" style=" color: rgb(14, 71, 163); font-family: Arial, Helvetica, sans-serif; font-size: 20px;  position: relative; bottom: 8px; text-align: center">
-                        Main Menu
-                    </p>
+            <div class="div-container">
+                <div class="button-base button-graphics" id="text-subcontainer">
+                    <div id="text-container">
+                        <a href="index.html" style="text-decoration: none">
+                            <p id="main-menu" style=" color: rgb(14, 71, 163); font-family: Arial, Helvetica, sans-serif; font-size: 20px;  position: relative; bottom: 8px; text-align: center">
+                                Main Menu
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="button-base" id="text-subcontainer">
+                    <div id="text-container">
+                        <p id="display-timer" style=" color: rgb(14, 71, 163); font-family: Arial, Helvetica, sans-serif; font-size: 20px;  position: relative; bottom: 8px; text-align: center">
+                            Timer
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="button-base button-graphics" id="text-subcontainer" onclick="beginProgram()">
+                    <div id="text-container">
+                        <button class="text-style" id="button-begin">Click to Begin</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="btn" id="text-subcontainer">
-                <div id="text-container">
-                    <p id="display-timer" style=" color: rgb(14, 71, 163); font-family: Arial, Helvetica, sans-serif; font-size: 20px;  position: relative; bottom: 8px; text-align: center">
-                        Timer
-                    </p>
-                </div>
-            </div>
-           
-            <div class="button-graphics btn" id="text-subcontainer" onclick="beginProgram()">
-                <div id="text-container">
-                    <button class="text-style" id="button-begin">Click to Begin</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- ************** SOURCE LINKS *************** -->
-        <script src="jsWhackAMole.js"></script>
-    </body>
-</html>
+            <script src="gamepage.js"></script>
+        </body>
+    </html>

@@ -4,7 +4,7 @@
   *
   * Index
   *
-  * - btn
+  * - button-base
   * - button-container
   * - button-graphics
   * - container
@@ -20,7 +20,7 @@
   */
 /* // ***** ------------------------ **** ------------------------ ***** // */     
 
-.btn {
+.button-base {
     background: #bbcce8;
     border: 2.5px solid rgb(14, 71,163);
     display:inline;
