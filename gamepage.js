@@ -21,19 +21,6 @@ var startTimer;
 
 formPopup.style.display = 'none';
 
-backgroundMusic = new Audio('backgroundMusic01.wav');
-if (typeof backgroundMusic.loop == 'boolean') {
-    backgroundMusic.loop = true;
-}
-
-else {
-    backgroundMusic.addEventListener('ended', function () {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-}
-backgroundMusic.play();
-
 function beginProgram() {
     document.getElementById("display-timer").innerHTML = "20";
     generateDiv();
@@ -105,6 +92,23 @@ function beginProgram() {
         squareDivArray.push(squareDiv);
     }
 }
+
+// ***** ------------------------ **** ------------------------ ***** //
+                // ***** Background Music ***** //
+// ***** ------------------------ **** ------------------------ ***** //
+
+backgroundMusic = new Audio('backgroundMusic01.wav');
+if (typeof backgroundMusic.loop == 'boolean') {
+    backgroundMusic.loop = true;
+}
+
+else {
+    backgroundMusic.addEventListener('ended', function () {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
+backgroundMusic.play();
 
 // ***** ------------------------ **** ------------------------ ***** //
                     // ** Coordinates GeneratorX ** //
