@@ -4,14 +4,17 @@
   *
   * Index
   *
+  * - body, html
   * - button-base
   * - button-container
   * - button-graphics
   * - container
+  * - display-timer
   * - div-container
   * - div-subcontainer
   * - form-box
   * - form-popup
+  * - main-menu
   * - message
   * - text-container
   * - text-style
@@ -19,6 +22,10 @@
   *
   */
 /* // ***** ------------------------ **** ------------------------ ***** // */     
+
+body, html {
+    min-width: 1130px;
+}
 
 .button-base {
     background: #bbcce8;
@@ -40,9 +47,20 @@
 }
 
 #container {
+    cursor: url(hammer.cur), default;
     position: fixed;
     height: 800px;
     width: 800px;
+}
+
+#display-timer {
+    bottom: 8px; 
+    color: rgb(14, 71, 163); 
+    cursor: pointer; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20px;  
+    position: relative; 
+    text-align: center;
 }
 
 .div-container {
@@ -80,6 +98,15 @@
     top: 0%;
     width: 100%;
     z-index: 1;
+}
+
+#main-menu {
+    color: rgb(14, 71, 163); 
+    cursor: pointer; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20px; 
+    position: relative; bottom: 8px; 
+    text-align: "center";
 }
 
 #message {

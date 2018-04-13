@@ -8,7 +8,7 @@ var formPopup = document.getElementById("form-popup");
 var max = 750;
 var min = 1;
 var numberOfSquares = 11;
-var positionChange = 6;
+var positionChange = 3;
 var randomCoordinateX;
 var randomCoordinateY;
 var soundDelete;
@@ -33,7 +33,7 @@ function beginProgram() {
         console.log(positionChange);
 
         if (positionChange == 1) {
-            positionChange = 6;
+            positionChange = 3;
             clearAll();
             generateDiv();
         }
@@ -81,7 +81,7 @@ function beginProgram() {
         squareDiv = document.createElement("img");
         squareDiv.src = "animatedMole.png";
         squareDiv.id = "squareDiv" + squareDivArray.length;
-        squareDiv.style = "cursor: pointer; height: 50px; position: absolute";
+        squareDiv.style = "height: 50px; position: absolute";
         squareDiv.style.left = randomCoordinateX + "px";
         squareDiv.style.top = randomCoordinateY + "px";
         squareDiv.addEventListener("click", function () {

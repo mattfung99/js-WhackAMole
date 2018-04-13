@@ -4,12 +4,19 @@
   *
   * Index
   *
+  * - body, html
   * - button-base
   * - button-graphics
   * - div-container
-  *
+  * - div-developer-name
+  * - div-mole-animation
+  * - matt-fung
   */
 /* // ***** ------------------------ **** ------------------------ ***** // */     
+
+body,html {
+    min-width: 1130px;
+}
 
 .button-base {
     background: #bbcce8;
@@ -33,6 +40,23 @@
 .div-container {
     text-align: center;
     width: 100%;
+}
+
+.div-developer-name {
+    text-align: right;
+    width: 100%;
+}
+
+.div-mole-animation {
+    display: inline-block;
+    height: 200px;
+    position: relative;
+    width: 200px;
+}
+
+#matt-fung {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 8px; 
 }
 
 /* // ***** ------------------------ **** ------------------------ ***** // */  
