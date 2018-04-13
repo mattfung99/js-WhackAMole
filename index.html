@@ -9,10 +9,22 @@
                 // Whack A Mole //
             </title>
 
+            <link rel="stylesheet" href="index.css">
             <link rel="icon" type="image/x-icon" href="controllerIcon.png">
         </head>
 
         <body>
-            
+            <div class="div-container">
+
+            </div>
+
+            <div class="div-container">
+                <a href="gamepage.html" style="text-decoration: none">
+                    <canvas class="button-base button-graphics" id="button-play" height="50" onclick="clearAll()" width="250"></canvas>
+                </a>
+                <canvas class="button-base button-graphics" id="button-instructions" height="50" onclick="instructionsPopup()" width="250"></canvas>
+            </div>
+
+            <script src="index.js"></script>
         </body>
     </html>

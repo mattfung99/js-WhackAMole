@@ -156,18 +156,6 @@ function deleteDivProcess(id) {
 }
 
 // ***** ------------------------ **** ------------------------ ***** //
-                    // ***** DRAW CANVAS TEXT ***** //
-// ***** ------------------------ **** ------------------------ ***** //
-
-// var mainMenu = document.getElementById("main-menu");
-// var ctxMainMenu = mainMenu.getContext("2d");
-
-// ctxMainMenu.font = "20px Arial";
-// ctxMainMenu.fillStyle = "rgb(14, 71, 163)";
-// ctxMainMenu.textAlign = "center";
-// ctxMainMenu.fillText("Main Menu", mainMenu.width / 2, mainMenu.height / 2);
-
-// ***** ------------------------ **** ------------------------ ***** //
                     // ******** Play Sound ******** //  
 // ***** ------------------------ **** ------------------------ ***** //
 

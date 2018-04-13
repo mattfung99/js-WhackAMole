@@ -1,0 +1,38 @@
+/* // ***** ------------------------ **** ------------------------ ***** // */  
+/**
+  * STYLES
+  *
+  * Index
+  *
+  * - button-base
+  * - button-graphics
+  * - div-container
+  *
+  */
+/* // ***** ------------------------ **** ------------------------ ***** // */     
+
+.button-base {
+    background: #bbcce8;
+    border: 2.5px solid rgb(14, 71,163);
+    display:inline;
+}  
+
+.button-graphics {
+    cursor: pointer;    
+}
+
+.button-graphics:active {
+    transform: translateY(1px);
+}
+
+.button-graphics:focus {
+    outline: black 1px dotted;
+    outline-offset: -2px;
+}
+
+.div-container {
+    text-align: center;
+    width: 100%;
+}
+
+/* // ***** ------------------------ **** ------------------------ ***** // */  
