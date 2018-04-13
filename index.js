@@ -1,5 +1,5 @@
 // ***** ------------------------ **** ------------------------ ***** //
-                    // ***** DRAW CANVAS TEXT ***** //
+                    // ***** GLOBAL VARIABLES ***** //
 // ***** ------------------------ **** ------------------------ ***** //
 
 var instructions = document.getElementById("button-instructions");
@@ -8,6 +8,10 @@ var play = document.getElementById("button-play");
 var ctxPlay = play.getContext("2d");
 var titleCanvas = document.getElementById("canvas-title");
 var ctxCanvasTitle = titleCanvas.getContext("2d");
+
+// ***** ------------------------ **** ------------------------ ***** //
+                    // ***** DRAW CANVAS TEXT ***** //
+// ***** ------------------------ **** ------------------------ ***** //
 
 ctxInstructions.font = "20px Arial";
 ctxInstructions.fillStyle = "rgb(14, 71, 163)";
