@@ -8,7 +8,7 @@ var formPopup = document.getElementById("form-popup");
 var max = 750;
 var min = 1;
 var numberOfSquares = 11;
-var positionChange = 3;
+var positionChange = 4;
 var randomCoordinateX;
 var randomCoordinateY;
 var soundDelete;
@@ -33,7 +33,7 @@ function beginProgram() {
         console.log(positionChange);
 
         if (positionChange == 1) {
-            positionChange = 3;
+            positionChange = 4;
             clearAll();
             generateDiv();
         }
@@ -94,7 +94,7 @@ function beginProgram() {
 }
 
 // ***** ------------------------ **** ------------------------ ***** //
-                // ***** Background Music ***** //
+                // ***** BACKGROUND MUSIC ***** //
 // ***** ------------------------ **** ------------------------ ***** //
 
 backgroundMusic = new Audio('backgroundMusic01.wav');
@@ -156,7 +156,7 @@ function deleteDivProcess(id) {
 }
 
 // ***** ------------------------ **** ------------------------ ***** //
-                    // ******** Play Sound ******** //  
+                    // ******** PLAY SOUND ******** //  
 // ***** ------------------------ **** ------------------------ ***** //
 
 function sound(src) {

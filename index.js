@@ -14,6 +14,9 @@ var commandMovementRightMole = document.getElementById("animated-mole-right");
 var positionImage = 0;
 var settingTimer;
 
+var formPopup = document.getElementById("form-popup");
+var openPopup = document.getElementById("button-instructions");
+
 // ***** ------------------------ **** ------------------------ ***** //
                     // ******** ANIMATION ********** //
 // ***** ------------------------ **** ------------------------ ***** //
@@ -77,3 +80,16 @@ ctxCanvasTitle.fillStyle = "rgb(14, 71, 163)";
 ctxCanvasTitle.textAlign = "center";
 ctxCanvasTitle.fillText("js Whack A Mole", titleCanvas.width / 2, titleCanvas.height / 2);
 
+// ***** ------------------------ **** ------------------------ ***** //
+                    // **** OPEN INSTRUCTIONS ***** //
+// ***** ------------------------ **** ------------------------ ***** //
+
+openPopup.onclick = function () {
+    formPopup.style.display = "block";
+}
+
+window.onclick = function (event) {
+    if (event.target == formPopup) {
+        formPopup.style.display = 'none';
+    }
+}

@@ -9,9 +9,31 @@
                 // Whack A Mole //
             </title>
 
+            <link rel="stylesheet" href="gamepage.css">
             <link rel="stylesheet" href="index.css">
             <link rel="icon" type="image/x-icon" href="animatedMole.png">
         <body onload="moveForward()">
+            <div class="div-container">
+                <div style="display: inline-block; position: relative">
+                    <div class='form-popup' id='form-popup'>
+                        <div class='form form-box'>
+                            <p id="message" style="font-size: 30px">
+                                Welcome to js Whack A Mole! 
+                            </p>
+                            <p id="message">
+                                To play, simply click on each mole to get rid of it!
+                            </p>
+                            <p id="message">
+                                The goal is to be able to get rid of all 12 moles in the allotted 20 seconds.
+                            </p>
+                            <p id="message">
+                                The moles change position every 3 seconds and it's important to note than an additional mole will be added each time the moles change position.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="div-container">
                 <div class="div-mole-animation">
                     <img alt="Animated Mole" class="animated-mole" id="animated-mole-left" src="animatedMoleTitle.png">
@@ -30,9 +52,9 @@
 
             <br><div class="div-container">
                 <a href="gamepage.html" style="text-decoration: none">
-                    <canvas class="button-base button-graphics" height="50" id="button-play" onclick="clearAll()" width="250"></canvas>
+                    <canvas class="button-base button-graphics" height="50" id="button-play" width="250"></canvas>
                 </a>
-                <canvas class="button-base button-graphics" height="50" id="button-instructions" onclick="instructionsPopup()" width="250"></canvas>
+                <canvas class="button-base button-graphics" height="50" id="button-instructions" width="250"></canvas>
             </div>
 
             <div class="div-developer-name">

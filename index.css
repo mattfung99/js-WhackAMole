@@ -5,47 +5,19 @@
   * Index
   *
   * - animated-mole
-  * - body, html
-  * - button-base
-  * - button-graphics
-  * - div-container
   * - div-developer-name
   * - div-mole-animation
+  * - form
+  * - form-box
   * - matt-fung
+  * - message
+  *
   */
 /* // ***** ------------------------ **** ------------------------ ***** // */     
 
 .animated-mole {
     left: 0px;
     position: absolute;
-}
-
-body,html {
-    min-width: 1130px;
-}
-
-.button-base {
-    background: #bbcce8;
-    border: 2.5px solid rgb(14, 71,163);
-    display:inline;
-}  
-
-.button-graphics {
-    cursor: pointer;    
-}
-
-.button-graphics:active {
-    transform: translateY(1px);
-}
-
-.button-graphics:focus {
-    outline: black 1px dotted;
-    outline-offset: -2px;
-}
-
-.div-container {
-    text-align: center;
-    width: 100%;
 }
 
 .div-developer-name {
@@ -61,10 +33,33 @@ body,html {
     width: 160px;
 }
 
+.form {
+    background-color: #bbcce8;
+    border: 2.5px solid rgb(14, 71, 163);
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    top: 25%;
+}
+
+.form-box {
+    height: 300px;
+    text-align: left;
+    width: 500px;
+}
+
 #matt-fung {
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 8px; 
+}
+
+#message {
+    color: rgb(14, 71, 163); 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20px; 
+    position: initial;
+    text-align: center;
 }
 
 /* // ***** ------------------------ **** ------------------------ ***** // */  
