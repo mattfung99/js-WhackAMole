@@ -1,5 +1,5 @@
 // ***** ------------------------ **** ------------------------ ***** //
-                    // ***** GLOBAL VARIABLES ***** //
+                // ***** GLOBAL VARIABLES ***** //
 // ***** ------------------------ **** ------------------------ ***** //
 
 var instructions = document.getElementById("button-instructions");
@@ -8,6 +8,55 @@ var play = document.getElementById("button-play");
 var ctxPlay = play.getContext("2d");
 var titleCanvas = document.getElementById("canvas-title");
 var ctxCanvasTitle = titleCanvas.getContext("2d");
+
+var commandMovementLeftMole = document.getElementById("animated-mole-left");
+var commandMovementRightMole = document.getElementById("animated-mole-right");
+var positionImage = 0;
+var settingTimer;
+
+// ***** ------------------------ **** ------------------------ ***** //
+                    // ******** ANIMATION ********** //
+// ***** ------------------------ **** ------------------------ ***** //
+
+function moveForward() {
+    settingTimer = setInterval(frameForward, 10);
+    function frameForward() {
+        if (positionImage == 160) {
+            moveBackward();
+        }
+        else {
+            motionDown();
+        }
+    }
+}
+
+function moveBackward() {
+    settingTimer = setInterval(frameBackward, 10);
+    function frameBackward() {
+        if (positionImage == 0) {
+            moveForward();
+        }
+        else {
+            motionUp();
+        }
+    }
+}
+
+function motionDown() {
+    positionImage++;
+    commandMovementLeftMole.style.top = positionImage + 'px';
+    commandMovementLeftMole.style.left = positionImage + 'px';
+    commandMovementRightMole.style.top = positionImage + 'px';
+    commandMovementRightMole.style.left = positionImage + 'px';
+}
+
+function motionUp() {
+    positionImage--;
+    commandMovementLeftMole.style.bottom = positionImage + 'px';
+    commandMovementLeftMole.style.right = positionImage + 'px';
+    commandMovementRightMole.style.bottom = positionImage + 'px';
+    commandMovementRightMole.style.right = positionImage + 'px';
+}
 
 // ***** ------------------------ **** ------------------------ ***** //
                     // ***** DRAW CANVAS TEXT ***** //
